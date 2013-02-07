@@ -1,0 +1,217 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.shine.moonshine"
+    android:versionCode="2"
+    android:versionName="1.2" >
+
+    <uses-sdk
+        android:minSdkVersion="8"
+        android:targetSdkVersion="16" />
+
+    <uses-permission android:name="android.permission.WRITE_INTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.GET_TASKS" />
+    <uses-permission android:name="android.permission.GET_ACCOUNTS" />
+
+    <application
+        android:allowBackup="true"
+        android:label="@string/app_name"
+        android:icon="@drawable/ic_launcher"
+	    android:theme="@style/Theme.Sherlock.Light" >
+        <meta-data
+            android:name="apptentive_api_key"
+            android:value="87e3fe13dcda10323b953959b0c66ec81edb643aaee234734c22e5aa5d73ec13" />
+
+        <activity android:name="com.apptentive.android.sdk.ViewActivity" />
+
+        <receiver android:name="com.apptentive.android.sdk.comm.NetworkStateReceiver" >
+            <intent-filter>
+                <action android:name="android.net.conn.CONNECTIVITY_CHANGE" />
+                <action android:name="android.intent.action.PACKAGE_RESTARTED" />
+            </intent-filter>
+        </receiver>
+
+        <activity
+            android:name="com.shine.moonshine.Home"
+            android:label="@string/title_activity_home" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        
+        <activity
+            android:name="com.shine.moonshine.RecipeList"
+            android:label="@string/title_activity_recipe_list" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.shine.moonshine.Home" />
+        </activity>
+        <activity
+            android:name="com.apptentive.android.sdk.SurveyModule"
+            android:label="@string/title_activity_home" >
+        </activity>
+        <activity
+            android:name="com.shine.moonshine.recipeDescription"
+            android:label="@string/title_activity_recipe_description" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.shine.moonshine.RecipeList" />
+        </activity>
+        <activity
+            android:name="com.shine.moonshine.EditRecipe"
+            android:label="@string/title_activity_recipe_description" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.shine.moonshine.ShowRecipe" />
+        </activity>
+        <activity
+            android:name="com.shine.moonshine.add_specific_item"
+            android:label="@string/add_ingredients" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.shine.moonshine.recipeDescription" />
+        </activity>
+        <activity
+            android:name="com.shine.moonshine.Preferences"
+            android:label="@string/title_activity_preferences" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.shine.moonshine.Home" />
+        </activity>
+        <activity
+            android:name="com.shine.moonshine.set_pref1"
+            android:label="@string/title_activity_set_pref" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.shine.moonshine.Home" />
+        </activity>
+        <activity
+            android:name="com.shine.moonshine.new_recipes_details"
+            android:label="@string/title_activity_new_recipes_details" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.shine.moonshine.RecipeList" />
+        </activity>
+        <activity
+            android:name="com.shine.moonshine.AddIngredient"
+            android:label="@string/title_activity_add_ingredient" >
+            <intent-filter>
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.shine.moonshine.Calculators"
+            android:label="@string/title_activity_calculators" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.shine.moonshine.Home" />
+        </activity>
+        <activity
+            android:name="com.shine.moonshine.DilutionActivity"
+            android:label="@string/title_activity_dilution" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.shine.moonshine.Calculators" />
+        </activity>
+        <activity
+            android:name="com.shine.moonshine.NewRecipe"
+            android:label="@string/title_activity_new_recipe" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.shine.moonshine.RecipeList" />
+        </activity>
+        <activity
+            android:name="com.shine.moonshine.Timers"
+            android:label="@string/title_activity_batch_management" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.shine.moonshine.recipeDescription" />
+        </activity>
+        <activity
+            android:name="com.shine.moonshine.MainActivity"
+            android:label="@string/title_activity_main" >
+            <intent-filter>
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.shine.moonshine.Alcohol_content"
+            android:label="@string/title_activity_alcohol_content" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.shine.moonshine.Calculators" />
+        </activity>
+        <activity
+            android:name="com.shine.moonshine.Converter"
+            android:label="@string/title_activity_converter" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.shine.moonshine.Calculators" />
+        </activity>
+        <activity
+            android:name="com.shine.moonshine.Batches"
+            android:label="@string/title_activity_batches" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.shine.moonshine.recipeDescription" />
+        </activity>
+        <activity
+            android:name="com.shine.moonshine.BatchNotes"
+            android:label="@string/title_activity_batch_notes" >
+            <intent-filter>
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.shine.moonshine.IngredientEdit"
+            android:label="@string/title_activity_ingredient_edit" >
+            <intent-filter>
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.shine.moonshine.EditItems"
+            android:label="@string/title_activity_edit_items" >
+            <intent-filter>
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.shine.moonshine.dding"
+            android:label="@string/title_activity_edit_items" >
+            <intent-filter>
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.shine.moonshine.ShowRecipe"
+            android:label="@string/title_activity_show_recipie" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.shine.moonshine.RecipeList" />
+        </activity>
+        <activity
+            android:name="com.shine.moonshine.AreYouSure"
+            android:label="@string/title_activity_are_you_sure" >
+        </activity>
+        <activity
+            android:name="com.shine.moonshine.EditIngredients"
+            android:label="@string/title_activity_edit_ingredients" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.shine.moonshine.Home" />
+        </activity>
+        <activity
+            android:name="com.shine.moonshine.EditSugar"
+            android:label="@string/title_activity_edit_sugar" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.shine.moonshine.Home" />
+        </activity>
+    </application>
+
+
+</manifest>

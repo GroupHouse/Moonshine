@@ -1,0 +1,274 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Moonshine</string>
+    <string name="menu_settings">Settings</string>
+    <string name="title_activity_home">Moonshine</string>
+    <string name="title_activity_recipe_list">Recipe List</string>
+    <string name="update_existing_recipe">Update existing recipe</string>
+    <string name="calculators">Calculators</string>
+    <string name="start_a_new_recipe">New Recipe</string>
+    <string name="recipe">Recipes</string>
+    <string name="name_of_recipe">Name of Recipe</string>
+    <string name="type_of_drink">Type of Drink</string>
+    <string name="grain_type_1">Grain Type</string>
+    <string name="standard">Standard</string>
+    <string name="metric">Metric</string>
+    <string name="amount_of_water">Amount of Water</string>
+    <string name="end_water">End Water</string>
+    <string name="grain_amount">Grain Amount</string>
+    <string name="sugar_amount">Sugar Amount</string>
+    <string name="Yeast">Yeast Type</string>
+    <string name="save">Next</string>
+    <string name="title_activity_recipe_description">Recipe Description</string>
+    <string name="glossary">Glossary</string>
+    <string name="title_activity_preferences">Pictures</string>
+    <string name="units">Units</string>
+    <string name="title_activity_set_pref">set_pref</string>
+    <string name="preference">Preferences</string>
+    <string name="title_activity_new_recipes_details">Recipe Detailss</string>
+    <string name="name">Recipe Name</string>
+    <string name="amount">Amount</string>
+    <string name="ingredients">Ingredients</string>
+    <string name="lb">lb</string>
+    <string name="title_activity_add_ingredient">AddIngredient</string>
+    <string name="title_activity_add_grains">Add Grains</string>
+    <string name="title_activity_calculators">Calculators</string>
+    <string name="title_activity_calculator">Calculator</string>
+    <string name="title_activity_dilution">Dilution Calculator</string>
+    <string name="title_activity_new_recipe">Recipe Details</string>
+    <string name="add_ingredients">Add Ingredient</string>
+    <string name="recipe_details">Recipe Details</string>
+
+    <string-array name="grainType_array">
+        <item>Grain Type</item>
+        <item>Cracked Corn</item>
+        <item>Wheat</item>
+        <item>Rye</item>
+        <item>Malted Rye</item>
+    </string-array>
+    <string-array name="ingredientType_array">
+        <item>Grain</item>
+        <item>Sugar</item>
+        <item>Vitamin</item>
+    </string-array>
+    <string-array name="unitAmount_array">
+        <item>Unit</item>
+        <item>Gr</item>
+        <item>C</item>
+        <item>Tbls</item>
+        <item>tsp</item>
+    </string-array>
+    <string-array name="conversions_array">
+        <item>Liters</item>
+        <item>Gallons</item>
+        <item>Cups</item>
+        <item>Oz</item>
+    </string-array>
+    <string-array name="GalorLit">
+        <item>Liters</item>
+        <item>Gallons</item>
+    </string-array>
+    <string-array name="type_array">
+        <item>Vodka</item>
+        <item>Whiskey</item>
+        <item>Rum</item>
+        <item>Tequila</item>
+    </string-array>
+    <string-array name="dilutiontext_array">
+        <item>Starting Amount</item>
+        <item>Ending Amount</item>
+    </string-array>    
+    <string-array name="measureType">
+        <item>Metric</item>
+        <item>Standard</item>
+    </string-array>
+    <string-array name="otherType">
+        <item>Other Items</item>
+        <item>1180 Whiskey Yeast</item>
+        <item>Bakers Yeast</item>
+    </string-array>
+    <string-array name="vitaminType">
+        <item>Vitamin Types</item>
+        <item>Multi Grain</item>
+        <item>Tomato Paste</item>
+        <item>DAP</item>
+    </string-array>
+    <string-array name="dilutionType">
+        <item>L</item>
+        <item>mL</item>
+        <item>Oz</item>
+        <item>Cups</item>
+        <item>Pints</item>
+        <item>Quarts</item>
+        <item>Gallon</item>
+    </string-array>
+    <string-array name="metricType">
+        <item>L</item>
+        <item>mL</item>
+        <item>g</item>
+        <item>kg</item>
+        <item>Gal</item>
+        <item>Oz</item>
+        <item>Lb</item>
+        <item>Cups</item>
+        <item>Tbsp</item>
+        <item>Tsp</item>
+    </string-array>
+    <string-array name="standardType">
+        <item>Gal</item>
+        <item>Oz</item>
+        <item>Lb</item>
+        <item>Cups</item>
+        <item>Tbsp</item>
+        <item>Tsp</item>
+        <item>L</item>
+        <item>mL</item>
+        <item>g</item>
+        <item>kg</item>
+    </string-array>
+    <string-array name="oneto12">
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+        <item>6</item>
+        <item>7</item>
+        <item>8</item>
+        <item>9</item>
+        <item>10</item>
+        <item>11</item>
+        <item>12</item>
+    </string-array>
+    <string-array name="oneto60">
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+        <item>6</item>
+        <item>7</item>
+        <item>8</item>
+        <item>9</item>
+        <item>10</item>
+        <item>11</item>
+        <item>12</item>
+        <item>13</item>
+        <item>14</item>
+        <item>15</item>
+        <item>16</item>
+        <item>17</item>
+        <item>18</item>
+        <item>19</item>
+        <item>20</item>
+        <item>21</item>
+        <item>22</item>
+        <item>23</item>
+        <item>24</item>
+        <item>25</item>
+        <item>26</item>
+        <item>27</item>
+        <item>28</item>
+        <item>29</item>
+        <item>30</item>
+        <item>31</item>
+        <item>32</item>
+        <item>33</item>
+        <item>34</item>
+        <item>35</item>
+        <item>36</item>
+        <item>37</item>
+        <item>38</item>
+        <item>39</item>
+        <item>40</item>
+        <item>41</item>
+        <item>42</item>
+        <item>43</item>
+        <item>44</item>
+        <item>45</item>
+        <item>46</item>
+        <item>47</item>
+        <item>48</item>
+        <item>49</item>
+        <item>50</item>
+        <item>51</item>
+        <item>52</item>
+        <item>53</item>
+        <item>54</item>
+        <item>55</item>
+        <item>56</item>
+        <item>57</item>
+        <item>58</item>
+        <item>59</item>
+    </string-array>
+    <string-array name="oneto20">
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+        <item>6</item>
+        <item>7</item>
+        <item>8</item>
+        <item>9</item>
+        <item>10</item>
+        <item>11</item>
+        <item>12</item>
+        <item>13</item>
+        <item>14</item>
+        <item>15</item>
+        <item>16</item>
+        <item>17</item>
+        <item>18</item>
+        <item>19</item>
+        <item>20</item>
+    </string-array>
+
+    <string name="backgroundcolor">#daf0fa</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="title_activity_batch_management">Batch Management</string>
+    <string name="title_activity_main">MainActivity</string>
+    <string name="at">\@</string>
+    <string name="title_activity_alcohol_content">Alcohol Content</string>
+    <string name="Celcius">Celcius</string>
+    <string name="Fahrenheit">Fahrenheit</string>
+    <string name="title_activity_converter">Converter</string>
+    <string name="title_section3">Section 3</string>
+    <string name="title_section2">Section 2</string>
+    <string name="title_section1">Section 1</string>
+    <string name="title_activity_batches">Batches</string>
+    <string name="start_a_new_batch">New Batch</string>
+    <string name="new_batch">New Batch</string>
+    <string name="title_activity_batch_notes">BatchNotes</string>
+    <string name="title_activity_ingredient_edit">IngredientEdit</string>
+    <string name="title_activity_edit_items">EditItems</string>
+    <string name="title_activity_show_recipie">Show Recipe</string>
+    <string name="Calculate">Calculate</string>
+    <string name="CalcLabel">Go to calculators</string>
+    <string name="RecipeLabel">Go to recipe list</string>
+    <string name="txtDilution">Dilution</string>
+    <string name="txtPotentialAlc">Potential Alc</string>
+    <string name="txtConversions">Conversions</string>
+    <string name="btnDilution">Dilution Button</string>
+    <string name="btnPotential">Potential Alcohol Button</string>
+    <string name="btnConversions">Conversion Button</string>
+    <string name="MashSize">Mash Size</string>
+    <string name="EndingSG">Ending SG</string>
+    <string name="StartingSG">Starting SG</string>
+    <string name="one">1.00</string>
+    <string name="iwanttocov">I Want To Convert</string>
+    <string name="Into">Into</string>
+    <string name="txtStartingPercent">Starting Percent</string>
+    <string name="txtStartingAmount">Starting Amount</string>
+    <string name="txtTargetPercent">Target Percent</string>
+    <string name="Add">Add</string>
+    <string name="txtBasicInformation">Basic Information</string>
+    <string name="title_activity_are_you_sure">Are You Sure</string>
+    <string name="title_activity_edit_ingredients">Edit Ingredients</string>
+    <string name="title_activity_edit_sugar">EditSugar</string>
+
+</resources>

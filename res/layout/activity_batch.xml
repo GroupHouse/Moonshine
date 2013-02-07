@@ -1,0 +1,83 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical" >
+
+    <GridLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+        <Button
+            android:id="@+id/btNewBatch"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_column="0"
+            android:layout_columnSpan="2"
+            android:layout_marginTop="10dp"
+            android:layout_row="0"
+            android:layout_rowSpan="2"
+            android:background="#ffffff"
+            android:onClick="StartNew"
+            android:paddingBottom="@dimen/padding_large"
+            android:text="@string/new_batch" />
+
+        <ImageView
+            android:id="@+id/imageView1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_column="1"
+            android:layout_gravity="left"
+            android:layout_row="0"
+            android:layout_rowSpan="2"
+            android:paddingLeft="@dimen/padding_large"
+            android:paddingTop="@dimen/padding_large"
+            android:src="@drawable/plus1" />
+
+        <TextView
+            android:id="@+id/tvName"
+            android:layout_gravity="left"
+            android:text="TextView"
+            android:visibility="invisible" />
+
+        <Space
+            android:layout_width="1dp"
+            android:layout_height="21dp"
+            android:layout_column="0"
+            android:layout_row="0" />
+
+        <Space
+            android:layout_width="298dp"
+            android:layout_height="37dp"
+            android:layout_column="2"
+            android:layout_row="1" />
+
+        <Space
+            android:layout_width="60dp"
+            android:layout_height="1dp"
+            android:layout_column="0"
+            android:layout_row="0" />
+
+        <Space
+            android:layout_width="260dp"
+            android:layout_height="1dp"
+            android:layout_column="1"
+            android:layout_row="0" />
+
+        <Space
+            android:layout_width="100dp"
+            android:layout_height="36dp"
+            android:layout_row="1" />
+    </GridLayout>
+
+	 <ListView
+	     android:id="@android:id/list"
+	     android:layout_width="match_parent"
+	     android:layout_height="wrap_content" >
+	 </ListView>
+
+
+
+</LinearLayout>  
+
+
+

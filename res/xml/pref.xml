@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen
+        xmlns:android="http://schemas.android.com/apk/res/android">
+
+   <SwitchPreference
+        android:key="UnitPref"
+        android:title="Unit"
+        android:summary="Units" 
+        android:summaryOn="Metric"
+        android:summaryOff="Standard"
+        android:switchTextOn="Metric"
+        android:switchTextOff="Standard"
+        android:persistent="true"
+    	android:enabled="true"
+    />
+
+	<EditTextPreference
+    	android:key="MashSize"
+    	android:title="Container Size"
+    	android:summary="Container Size"
+    	android:defaultValue="10"
+ 	/>
+
+</PreferenceScreen>

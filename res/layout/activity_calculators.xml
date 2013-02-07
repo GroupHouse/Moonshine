@@ -1,0 +1,120 @@
+<TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/TableLayout1"
+       android:layout_width="match_parent"
+           android:layout_height="match_parent"
+           android:layout_weight="0.95"
+           android:background="#daf0fa"
+           android:shrinkColumns="*"
+           android:stretchColumns="*" >
+
+   <TableRow
+               android:id="@+id/tableRow1"
+               android:layout_width="match_parent"
+               android:layout_height="30dp" >
+          
+               </TableRow>
+
+    <TableRow
+        android:id="@+id/tableRow2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="35dp" >
+
+        <ImageButton
+            android:id="@+id/imgPotential"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="#daf0fa"
+            android:contentDescription="@string/btnPotential"
+            android:src="@drawable/potential" />
+
+        <ImageButton
+            android:id="@+id/imgDilution"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:background="#daf0fa"
+            android:contentDescription="@string/btnDilution"
+            android:paddingRight="15dp"
+            android:src="@drawable/dilute" />
+
+    </TableRow>
+
+    <TableRow
+        android:id="@+id/tableRow3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+         >
+
+        <TextView
+            android:id="@+id/SGCount"
+          android:layout_width="match_parent"
+                   android:layout_height="wrap_content"
+                   android:layout_gravity="center_horizontal"
+                   android:layout_weight="0.91"
+            android:background="#daf0fa"
+         
+            android:text="@string/txtPotentialAlc"
+            android:textAppearance="@style/RegularFont" />
+
+        <TextView
+            android:id="@+id/btDilution"
+       android:layout_width="match_parent"
+                   android:layout_height="wrap_content"
+                   android:layout_gravity="center_horizontal"
+                   android:layout_weight="0.91"
+            android:background="#daf0fa"
+            android:text="@string/txtDilution"
+            android:textAppearance="@style/RegularFont" />
+
+    </TableRow>
+
+    <TableRow
+        android:id="@+id/tableRow4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="left"
+        android:gravity="center_horizontal"
+        android:paddingTop="35dp" >
+
+        <ImageButton
+            android:id="@+id/imgConversions"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:background="#daf0fa"
+            android:contentDescription="@string/btnConversions"
+            android:src="@drawable/math" />
+
+        <ImageButton
+            android:id="@+id/ImageButton01"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#daf0fa"
+            android:contentDescription="@string/btnDilution"
+            android:paddingTop="@dimen/padding_medium"
+            android:src="@drawable/dilute"
+            android:visibility="invisible" />
+
+    </TableRow>
+
+    <TableRow
+        android:id="@+id/tableRow5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal" >
+
+        <Button
+            android:id="@+id/btConvert"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="top|center_horizontal"
+            android:background="#daf0fa"
+            android:gravity="right|center|top"
+            android:text="@string/txtConversions"
+            android:textAppearance="@style/RegularFont" />
+
+    </TableRow>
+
+</TableLayout>

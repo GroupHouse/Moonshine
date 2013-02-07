@@ -1,0 +1,184 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".EditIngredients" >
+
+    <TabHost
+        android:id="@+id/tabhost"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical" >
+
+            <TabWidget
+                android:id="@android:id/tabs"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" >
+            </TabWidget>
+
+            <FrameLayout
+                android:id="@android:id/tabcontent"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" >
+
+                <RelativeLayout
+                    android:id="@+id/tab1"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" >
+
+                    <EditText
+                        android:id="@+id/editText1"
+                        android:layout_width="150dp"
+                        android:layout_height="wrap_content"
+                        android:ems="10" >
+
+                        <requestFocus />
+                    </EditText>
+                    
+                    <ListView 
+                        android:id="@+id/Sugars"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" 
+                    android:layout_below="@+id/editText1"
+                    android:tag="Sugars"
+                    android:paddingLeft="10dp"
+                    android:paddingTop="10dp"
+                        />
+
+                    <Button
+                        android:id="@+id/SugarButton"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_above="@+id/Sugars"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginRight="26dp"
+                        android:layout_weight="1"
+                        android:gravity="right"
+                        android:text="Add New" />
+                    
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/tab2"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" >
+                    
+                     <EditText
+                        android:id="@+id/GrainText"
+                        android:layout_width="150dp"
+                        android:layout_height="wrap_content"
+                        android:ems="10" >
+
+                        <requestFocus />
+                    </EditText>
+                    
+                    <ListView 
+                        android:id="@+id/Grains"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" 
+                    android:layout_below="@+id/GrainText"
+                    android:tag="Grains"
+                    android:paddingLeft="10dp"
+                    android:paddingTop="10dp"
+                        />
+
+                    <Button
+                        android:id="@+id/GrainButton"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_above="@+id/Grains"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginRight="26dp"
+                        android:layout_weight="1"
+                        android:gravity="right"
+                        android:text="Add New" />
+                    
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/tab3"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" >
+                    
+                    
+                          <EditText
+                        android:id="@+id/vitamintext"
+                        android:layout_width="150dp"
+                        android:layout_height="wrap_content"
+                        android:ems="10" >
+
+                    </EditText>
+                    
+                    <ListView
+                        android:id="@+id/Vitamins1"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_below="@+id/vitamintext"
+                        android:paddingLeft="10dp"
+                        android:tag="Vitamin"
+                        android:paddingTop="10dp" />
+
+                    <Button
+                        android:id="@+id/VitaminButton"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_above="@+id/Vitamins1"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginRight="26dp"
+                        android:layout_weight="1"
+                        android:gravity="right"
+                        android:text="Add New" />
+                    
+                    
+                    
+                </RelativeLayout>
+                
+                 <RelativeLayout
+                    android:id="@+id/tab4"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" >
+                    
+                       <EditText
+                        android:id="@+id/othertext"
+                        android:layout_width="150dp"
+                        android:layout_height="wrap_content"
+                        android:ems="10" >
+
+                    </EditText>
+                    
+                    <ListView 
+                        android:id="@+id/Others"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" 
+                    android:layout_below="@+id/othertext"
+                    android:tag="Other"
+                    android:paddingLeft="10dp"
+                    android:paddingTop="10dp"
+                        />
+
+                    <Button
+                        android:id="@+id/OtherButton"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_above="@+id/Others"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginRight="26dp"
+                        android:layout_weight="1"
+                        android:gravity="right"
+                        android:text="Add New" />
+                     
+                     
+                </RelativeLayout>
+                
+            </FrameLayout>
+        </LinearLayout>
+
+    </TabHost>
+
+</RelativeLayout>

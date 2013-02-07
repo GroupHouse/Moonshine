@@ -1,0 +1,13 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+         <item android:id="@+id/item1"
+             android:title="Calculator"
+          android:icon="@drawable/calc"
+          android:showAsAction="ifRoom" />
+        
+    <item android:id="@+id/save_button"
+          android:title="Edit"
+         android:icon="@drawable/edit1"
+          android:showAsAction="always|withText" />
+    
+</menu>

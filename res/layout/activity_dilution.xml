@@ -1,0 +1,194 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/LinearLayout1"
+    android:layout_width="fill_parent"
+    android:layout_height="match_parent"
+    android:background="#daf0fa"
+    android:orientation="vertical" >
+
+    <TableLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="40dp" >
+
+        <TableRow
+            android:id="@+id/tableRow1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" >
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" >
+
+                <Spinner
+                    android:id="@+id/txtStartingAmount"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:entries="@array/dilutiontext_array"
+                    android:paddingLeft="@dimen/padding_medium" />
+
+                <TextView
+                    android:id="@+id/txtStartingPercent"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBaseline="@id/txtStartingAmount"
+                    android:gravity="right|bottom"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="@dimen/padding_medium"
+                    android:text="@string/txtStartingPercent"
+                    android:textAppearance="?android:attr/textAppearanceMedium" />
+
+            </RelativeLayout>
+        </TableRow>
+
+        <TableRow
+            android:id="@+id/tableRow2"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="#ffffff" >
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="#daf0fa"
+                android:gravity="right|bottom" >
+
+                <EditText
+                    android:id="@+id/etStartingAmount"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:gravity="bottom"
+                    android:inputType="number|numberDecimal"
+                    android:paddingBottom="10dp"
+                    android:paddingLeft="10dp"
+                    android:width="100dp" />
+
+                <Spinner
+                    android:id="@+id/spStartMeasure"
+                    android:layout_width="90dp"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBottom="@+id/etStartingAmount"
+                    android:layout_toRightOf="@+id/etStartingAmount"
+                    android:entries="@array/dilutionType" />
+
+                <EditText
+                    android:id="@+id/etStartPercent"
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:gravity="right"
+                    android:inputType="numberDecimal"
+                    android:paddingBottom="10dp"
+                    android:paddingRight="@dimen/padding_medium"
+                    android:width="50dp" />
+
+            </RelativeLayout>
+        </TableRow>
+
+        <TableRow
+            android:id="@+id/tableRow3"
+            android:layout_width="wrap_content" >
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                android:layout_gravity="bottom|right"
+                android:gravity="bottom"
+                android:paddingTop="10dp" >
+
+                <TextView
+                    android:id="@+id/txtTargetPercentage"
+                    android:layout_width="wrap_content"
+                    android:layout_height="32dp"
+                    android:layout_alignParentLeft="true"
+                    android:layout_marginLeft="5dp"
+                    android:gravity="bottom"
+                    android:paddingLeft="@dimen/padding_medium"
+                    android:paddingRight="@dimen/padding_medium"
+                    android:text="@string/txtTargetPercent"
+                    android:textAppearance="?android:attr/textAppearanceMedium" />
+
+            </RelativeLayout>
+        </TableRow>
+
+        <TableRow
+            android:id="@+id/TableRow01"
+            android:layout_width="wrap_content" >
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                android:layout_gravity="bottom|right"
+                android:gravity="bottom"
+                android:paddingTop="10dp" >
+
+                <EditText
+                    android:id="@+id/etTargetPercentage"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:ems="10"
+                    android:gravity="center_vertical|right"
+                    android:inputType="numberDecimal"
+                    android:paddingRight="@dimen/padding_medium"
+                    android:text="40"
+                    android:width="100dp" />
+
+            </RelativeLayout>
+        </TableRow>
+
+        <TableRow
+            android:id="@+id/tableRow4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|right"
+            android:paddingTop="10dp"
+            android:visibility="invisible" >
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical" >
+
+                <TextView
+                    android:id="@+id/etAmountToAdd"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:gravity="bottom|left"
+                    android:inputType="textMultiLine"
+                    android:lines="2"
+                    android:paddingLeft="@dimen/padding_large"
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:width="100dp" />
+            </RelativeLayout>
+        </TableRow>
+    </TableLayout>
+
+    <RelativeLayout
+        android:id="@+id/a"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="@dimen/padding_large"
+        android:paddingTop="@dimen/padding_large" >
+
+        <requestFocus
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+             />
+
+        <Button
+            android:id="@+id/btCalculate"
+            android:layout_width="211dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginLeft="156dp"
+            android:text="@string/Calculate" />
+
+    </RelativeLayout>
+
+</LinearLayout>

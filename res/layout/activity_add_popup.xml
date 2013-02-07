@@ -1,0 +1,40 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:id="@+id/layout_root"
+              android:orientation="vertical"
+              android:layout_width="fill_parent"
+              android:layout_height="fill_parent"
+              android:padding="10dp"
+              >
+   
+   		<Button
+           			android:id="@+id/btnAddGrain"
+           			android:layout_width="fill_parent"
+           			android:layout_height="wrap_content"
+           			android:layout_marginTop="10dp"
+           			 android:text="Add Grain"
+		            android:onClick="addGrain"/>
+        <Button
+           			android:id="@+id/btnAddSugar"
+           			android:layout_width="fill_parent"
+           			      android:layout_marginTop="10dp"
+           					android:layout_height="wrap_content"
+           					 android:text="Add Sugar"
+		            android:onClick="addSugar"/>
+
+          <Button
+              android:id="@+id/btnAddVitamin"
+              android:layout_width="fill_parent"
+              android:layout_height="wrap_content"
+              android:layout_marginTop="10dp"
+             android:onClick="addVitamn"
+              android:text="Add Vitamin" />
+
+          <Button
+           			android:id="@+id/btnAddOther"
+           			android:layout_width="fill_parent"
+           			android:layout_height="wrap_content"
+		            android:layout_marginTop="10dp"
+		         android:text="Add Other"
+		            android:onClick="addOther"/>
+        
+</LinearLayout>

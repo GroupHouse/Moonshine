@@ -1,0 +1,104 @@
+<TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/widget43"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="#daf0fa" >
+
+    <TableRow
+        android:id="@+id/tableRow1"
+        android:layout_width="wrap_content"
+        android:paddingTop="30dp" >
+
+        <TextView
+            android:id="@+id/txtStartingSG"
+            android:layout_gravity="bottom"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:text="@string/StartingSG"
+            android:textAppearance="?android:attr/textAppearanceMedium" />
+
+        <EditText
+            android:id="@+id/etStartingSG"
+            android:inputType="numberDecimal"
+			android:layout_alignBottom="@+id/txtStartingSG"
+            
+            android:scrollbarAlwaysDrawVerticalTrack="false"
+            android:singleLine="true" >
+
+            <requestFocus />
+        </EditText>
+    </TableRow>
+
+    <TableRow
+        android:id="@+id/tableRow2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" >
+
+        <TextView
+            android:id="@+id/txtEndingSG"
+            android:layout_width="101dp"
+            android:layout_gravity="bottom"
+            android:paddingLeft="10dp"
+            android:text="@string/EndingSG"
+            android:textAppearance="?android:attr/textAppearanceMedium" />
+
+        <EditText
+            android:id="@+id/etEndingSG"
+            android:inputType="numberDecimal"
+            android:singleLine="true"
+            android:text="@string/one" />
+    </TableRow>
+
+    <TableRow
+        android:id="@+id/tableRow3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" >
+
+        <TextView
+            android:id="@+id/txtMashSize"
+            android:layout_width="101dp"
+            android:layout_gravity="bottom"
+            android:paddingLeft="10dp"
+            android:text="@string/MashSize"
+            android:textAppearance="?android:attr/textAppearanceMedium" />
+
+        <EditText
+            android:id="@+id/etMashSize"
+            android:layout_width="110dp"
+            android:layout_gravity="bottom"
+            android:inputType="numberDecimal"
+            android:singleLine="true" >
+
+        </EditText>
+
+        <Spinner
+            android:id="@+id/spMeasure"
+            android:layout_gravity="bottom" />
+    </TableRow>
+
+    <RelativeLayout
+        android:id="@+id/RelativeLayout1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:columnCount="2"
+        android:paddingTop="@dimen/padding_medium" >
+
+        <TextView
+            android:id="@+id/tvPotentialAlc"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingLeft="@dimen/padding_medium"
+            android:textAppearance="?android:attr/textAppearanceMedium" />
+
+        <Button
+            android:id="@+id/btnSGCalculate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right|bottom"
+            android:layout_marginLeft="151dp"
+            android:layout_below="@+id/tvPotentialAlc"
+            android:text="@string/Calculate"
+            android:width="211dp" />
+    </RelativeLayout>
+
+</TableLayout>
