@@ -14,7 +14,7 @@ public class Shine {
 	private int id; //recipe ID
 	private String Name; //recipe name
 	private String typeOf; //recipe liquor type
-	private int MashSize; //recipe liquor type
+	private double MashSize; //recipe liquor type
 	private double SG; //recipe liquor type
 
 	private String Instructions; //recipe liquor type
@@ -70,7 +70,7 @@ private boolean update;
 			 }
 			 else
 			 {
-			 this.MashSize= Integer.parseInt(cursor.getString(cursor.getColumnIndex("recipieMashSize")));
+			 this.MashSize= Double.parseDouble(cursor.getString(cursor.getColumnIndex("recipieMashSize")));
 			 }
 			 this.SG= Double.parseDouble(cursor.getString(cursor.getColumnIndex("SG")));
 		
@@ -122,7 +122,7 @@ private boolean update;
 		 }
 		 else
 		 {
-		 this.MashSize= Integer.parseInt(cursor.getString(cursor.getColumnIndex("recipieMashSize")));
+		 this.MashSize= Double.parseDouble(cursor.getString(cursor.getColumnIndex("recipieMashSize")));
 		 }
 		 this.SG= Double.parseDouble(cursor.getString(cursor.getColumnIndex("SG")));
 		 if (cursor.getString(cursor.getColumnIndex("instructions")).length() >0)
@@ -158,12 +158,12 @@ private boolean update;
 	{
 		return Name;
 	}
-	public void setMashSize(int name)
+	public void setMashSize(double name)
 	{
 		this.MashSize = name;
 	}
 	
-	public int getMashSize()
+	public double getMashSize()
 	{
 		return MashSize;
 	}
@@ -235,7 +235,7 @@ private boolean update;
 	{
 		if (Ingredient.equals("Water"))
 		{
-			this.MashSize = Integer.parseInt(Amount);
+			this.MashSize = Double.parseDouble(Amount);
 		}
 		if (update)
 		{

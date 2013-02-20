@@ -8,28 +8,28 @@ package com.apptentive.android.sdk;
 
 public final class R {
 	public static final class id {
-		public static final int apptentive_activity_content_view = 0x7f0500b3;
-		public static final int apptentive_branding_view = 0x7f0500b4;
-		public static final int apptentive_survey_scrollview = 0x7f0500c4;
-		public static final int apptentive_choice_yes = 0x7f0500b6;
-		public static final int apptentive_rating_no = 0x7f0500bf;
-		public static final int apptentive_button_cancel = 0x7f0500b8;
-		public static final int apptentive_survey_action_bar = 0x7f0500c1;
-		public static final int apptentive_feedback_text = 0x7f0500bb;
-		public static final int apptentive_survey_title_text = 0x7f0500c2;
-		public static final int apptentive_feedback_user_email = 0x7f0500ba;
-		public static final int apptentive_survey_button_skip = 0x7f0500c3;
-		public static final int apptentive_activity_about_flipper = 0x7f0500b1;
-		public static final int apptentive_rating_message = 0x7f0500bc;
-		public static final int aptentive_survey_question_list = 0x7f0500c5;
-		public static final int apptentive_button_about_okay = 0x7f0500b0;
-		public static final int apptentive_choice_no = 0x7f0500b5;
-		public static final int apptentive_rating_rate = 0x7f0500bd;
-		public static final int apptentive_paper_frame = 0x7f0500b7;
-		public static final int apptentive_activity_content_view_container = 0x7f0500b2;
-		public static final int feedback_survey_main_screen_layout = 0x7f0500c0;
-		public static final int apptentive_rating_later = 0x7f0500be;
-		public static final int apptentive_button_send = 0x7f0500b9;
+		public static final int apptentive_activity_content_view = 0x7f0500ba;
+		public static final int apptentive_branding_view = 0x7f0500bb;
+		public static final int apptentive_survey_scrollview = 0x7f0500cb;
+		public static final int apptentive_choice_yes = 0x7f0500bd;
+		public static final int apptentive_rating_no = 0x7f0500c6;
+		public static final int apptentive_button_cancel = 0x7f0500bf;
+		public static final int apptentive_survey_action_bar = 0x7f0500c8;
+		public static final int apptentive_feedback_text = 0x7f0500c2;
+		public static final int apptentive_survey_title_text = 0x7f0500c9;
+		public static final int apptentive_feedback_user_email = 0x7f0500c1;
+		public static final int apptentive_survey_button_skip = 0x7f0500ca;
+		public static final int apptentive_activity_about_flipper = 0x7f0500b8;
+		public static final int apptentive_rating_message = 0x7f0500c3;
+		public static final int aptentive_survey_question_list = 0x7f0500cc;
+		public static final int apptentive_button_about_okay = 0x7f0500b7;
+		public static final int apptentive_choice_no = 0x7f0500bc;
+		public static final int apptentive_rating_rate = 0x7f0500c4;
+		public static final int apptentive_paper_frame = 0x7f0500be;
+		public static final int apptentive_activity_content_view_container = 0x7f0500b9;
+		public static final int feedback_survey_main_screen_layout = 0x7f0500c7;
+		public static final int apptentive_rating_later = 0x7f0500c5;
+		public static final int apptentive_button_send = 0x7f0500c0;
 	}
 	public static final class color {
 		public static final int apptentive_grey = 0x7f070010;
@@ -73,13 +73,13 @@ public final class R {
 		public static final int apptentive_rating_error = 0x7f0a0029;
 	}
 	public static final class layout {
-		public static final int apptentive_survey = 0x7f03002c;
-		public static final int apptentive_about = 0x7f030026;
-		public static final int apptentive_activity = 0x7f030027;
-		public static final int apptentive_rating = 0x7f03002b;
-		public static final int apptentive_feedback = 0x7f03002a;
-		public static final int apptentive_choice = 0x7f030029;
-		public static final int apptentive_branding = 0x7f030028;
+		public static final int apptentive_survey = 0x7f03002d;
+		public static final int apptentive_about = 0x7f030027;
+		public static final int apptentive_activity = 0x7f030028;
+		public static final int apptentive_rating = 0x7f03002c;
+		public static final int apptentive_feedback = 0x7f03002b;
+		public static final int apptentive_choice = 0x7f03002a;
+		public static final int apptentive_branding = 0x7f030029;
 	}
 	public static final class drawable {
 		public static final int apptentive_dotted_red_line_layout = 0x7f020071;

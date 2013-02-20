@@ -22,6 +22,12 @@
             android:text="@string/iwanttocov"
             android:textAppearance="?android:attr/textAppearanceMedium" />
 
+        <Spinner
+            android:id="@+id/spliqorweigth"
+            android:layout_width="158dp"
+            android:layout_height="wrap_content"
+            android:entries="@array/converttype" />
+
     </LinearLayout>
 
     <RelativeLayout

@@ -47,6 +47,11 @@
         <item>Rye</item>
         <item>Malted Rye</item>
     </string-array>
+    <string-array name="converttype">
+        <item>Liquids</item>
+        <item>Weights</item>
+        
+    </string-array>
     <string-array name="ingredientType_array">
         <item>Grain</item>
         <item>Sugar</item>
@@ -65,9 +70,19 @@
         <item>Cups</item>
         <item>Oz</item>
     </string-array>
+      <string-array name="weight_array">
+        <item>Lb</item>
+        <item>Kg</item>
+        <item>g</item>
+        
+    </string-array>
     <string-array name="GalorLit">
         <item>Liters</item>
         <item>Gallons</item>
+    </string-array>
+    <string-array name="kglb">
+        <item>kg</item>
+        <item>Lb</item>
     </string-array>
     <string-array name="type_array">
         <item>Vodka</item>
@@ -78,7 +93,7 @@
     <string-array name="dilutiontext_array">
         <item>Starting Amount</item>
         <item>Ending Amount</item>
-    </string-array>    
+    </string-array>
     <string-array name="measureType">
         <item>Metric</item>
         <item>Standard</item>
@@ -270,5 +285,7 @@
     <string name="title_activity_are_you_sure">Are You Sure</string>
     <string name="title_activity_edit_ingredients">Edit Ingredients</string>
     <string name="title_activity_edit_sugar">EditSugar</string>
+    <string name="title_activity_yield">Alcohol Yield</string>
+    <string name="title_activity_starting">starting</string>
 
 </resources>

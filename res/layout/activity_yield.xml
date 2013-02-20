@@ -1,0 +1,392 @@
+<RelativeLayout xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/LinearLayout1"
+    android:layout_width="fill_parent"
+    android:layout_height="match_parent"
+    android:background="#daf0fa"
+    android:orientation="vertical" >
+
+<TabHost
+        android:id="@+id/tabhost1"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical" >
+
+            <TabWidget
+                android:id="@android:id/tabs"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" >
+            </TabWidget>
+
+            <FrameLayout
+                android:id="@android:id/tabcontent"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" >
+                
+                <RelativeLayout
+                    android:id="@+id/tab1"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" >
+
+                    <TableLayout
+                        android:id="@+id/tableLayout1"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content" >
+
+                        <TableRow
+                            android:id="@+id/TR1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="bottom" >
+
+                            <RelativeLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:paddingTop="5dp" >
+
+                                <EditText
+                                    android:id="@+id/etStartingAmount"
+                                    android:layout_width="75dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_toRightOf="@+id/txtStartingAmount"
+                                    android:ems="10"
+                                    android:gravity="bottom"
+                                    android:inputType="number|numberDecimal"
+                                    android:paddingLeft="5dp"
+                                    android:width="100dp" />
+
+                                <Spinner
+                                    android:id="@+id/spStartMeasure"
+                                    android:layout_width="60dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_alignBottom="@+id/etStartingAmount"
+                                    android:layout_alignParentTop="true"
+                                    android:layout_toRightOf="@+id/etStartingAmount"
+                                    android:entries="@array/kglb" />
+
+                                <TextView
+                                    android:id="@+id/textView1"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_alignBottom="@+id/etStartingAmount"
+                                    android:layout_toRightOf="@+id/spStartMeasure"
+                                    android:text="Of sugar"
+                                    android:textAppearance="?android:attr/textAppearanceMedium" />
+
+                                <TextView
+                                    android:id="@+id/txtStartingAmount"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_alignBottom="@+id/etStartingAmount"
+                                    android:layout_alignParentLeft="true"
+                                    android:paddingLeft="5dp"
+                                    android:text="Start with"
+                                    android:textAppearance="?android:attr/textAppearanceMedium" />
+                            </RelativeLayout>
+                        </TableRow>
+
+                        <TableRow
+                            android:id="@+id/tableRow2"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:background="#ffffff" >
+
+                            <RelativeLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="bottom"
+                                android:background="#daf0fa"
+                                android:gravity="left" >
+
+
+                                <TextView
+                                    android:id="@+id/etAmountToAdd"
+                                    android:layout_width="fill_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_alignBottom="@+id/etStartPercent"
+                                    android:ems="10"
+                                    android:gravity="bottom|left"
+                                    android:inputType="textMultiLine"
+                                    android:lines="2"
+                                    android:paddingLeft="@dimen/padding_large"
+                                    android:paddingTop="5dp"
+                                    android:textAppearance="?android:attr/textAppearanceLarge"
+                                    android:width="100dp" />
+
+                                <TextView
+                                    android:id="@+id/txtStartingPercent"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_alignBottom="@+id/etStartPercent"
+                                    android:gravity="left"
+                                    android:paddingLeft="5dp"
+                                    android:paddingRight="@dimen/padding_medium"
+                                    android:text="Your still makes"
+                                    android:textAppearance="?android:attr/textAppearanceMedium" />
+
+                                <TextView
+                                    android:id="@+id/TextView01"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_alignBottom="@+id/etStartPercent"
+                                    android:layout_alignParentRight="true"
+                                    android:layout_marginRight="26dp"
+                                    android:gravity="right"
+                                    android:paddingLeft="@dimen/padding_medium"
+                                    android:text="% Alc" />
+
+                                <EditText
+                                     android:id="@+id/etStartPercent"
+                                    android:layout_width="75dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_alignParentRight="true"
+                                    android:layout_alignParentTop="true"
+                                    android:layout_marginRight="68dp"
+                                    android:layout_centerVertical="true"
+                                    android:ems="10"
+                                    android:inputType="numberDecimal" />
+
+                            </RelativeLayout>
+                        </TableRow>
+
+                        <TableRow
+                            android:id="@+id/tableRow3"
+                            android:layout_width="wrap_content"
+                            android:paddingTop="10dp" >
+
+                            <RelativeLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="bottom"
+                                android:background="#daf0fa"
+                                android:gravity="left" >
+
+                                <Spinner
+                                    android:id="@+id/Spinner01"
+                                    android:layout_width="69dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_alignBottom="@+id/etTargetPercentage"
+                                    android:layout_alignParentRight="true"
+                                    android:layout_alignParentTop="true"
+                                    android:entries="@array/GalorLit" />
+
+                                <EditText
+                                    android:id="@+id/etTargetPercentage"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_toLeftOf="@+id/Spinner01"
+                                    android:ems="10"
+                                    android:gravity="bottom"
+                                    android:inputType="numberDecimal"
+                                    android:paddingRight="@dimen/padding_medium"
+                           
+                                    android:width="75dp" />
+
+                                <TextView
+                                    android:id="@+id/txtTargetPercentage"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="32dp"
+                                    android:layout_alignBottom="@+id/etTargetPercentage"
+                                    android:layout_alignParentLeft="true"
+                                    android:paddingLeft="5dp"
+                                    android:paddingRight="@dimen/padding_medium"
+                                    android:text="You will collect"
+                                    android:textAppearance="?android:attr/textAppearanceMedium" />
+                            </RelativeLayout>
+                        </TableRow>
+
+                        <TableRow
+                            android:id="@+id/TableRow01"
+                            android:layout_width="wrap_content" >
+
+                            <RelativeLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="fill_parent"
+                                android:layout_gravity="bottom|right"
+                                android:gravity="bottom"
+                                android:paddingTop="10dp" >
+                            </RelativeLayout>
+                        </TableRow>
+                    </TableLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/a"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingBottom="@dimen/padding_large"
+                        android:paddingTop="@dimen/padding_large" >
+
+                        <requestFocus
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" />
+                    </RelativeLayout>
+
+                    <Button
+                        android:id="@+id/btCalculate"
+                        android:layout_width="211dp"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_below="@+id/tableLayout1"
+                        android:text="@string/Calculate" />
+                </RelativeLayout>
+                <RelativeLayout
+    android:id="@+id/tab2"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <TableLayout
+        android:id="@+id/tableLayout1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true" >
+
+        <TableRow
+            android:id="@+id/tableRow1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+              android:layout_gravity="center_horizontal"
+          
+            android:paddingBottom="10dp"
+            android:paddingLeft="15dp"
+            android:paddingTop="20dp" >
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" >
+
+                <TextView
+                    android:id="@+id/tomake"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBottom="@+id/washsize"
+                    android:layout_alignParentBottom="@+id/tableRow1"
+                    android:paddingRight="10dp"
+                    android:text="To make" />
+
+                <EditText
+                    android:id="@+id/washsize"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:inputType="numberDecimal"
+                    android:layout_toRightOf="@+id/tomake"
+                    android:width="50dp" >
+
+                    <requestFocus />
+                </EditText>
+
+                <TextView
+                    android:id="@+id/ofwash"
+                          android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBottom="@id/washsize"
+                    android:layout_alignParentBottom="@+id/tableRow1"
+                    android:layout_toRightOf="@+id/washsize"
+                    android:text="L of wash @" />
+
+                <EditText
+                    android:id="@+id/percent"
+                           android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBottom="@id/washsize"
+                    android:layout_alignParentBottom="@+id/tableRow1"
+                    android:ems="10"
+					android:layout_toRightOf="@+id/ofwash"
+					android:inputType="numberDecimal"
+                    android:width="75dp" />
+
+                <TextView
+                    android:id="@+id/textView3"
+                       android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBottom="@id/washsize"
+                    android:layout_alignParentBottom="@+id/tableRow1"
+                    
+                    android:layout_toRightOf="@+id/percent"
+                    android:text="% Alc" />
+
+            </RelativeLayout>
+
+        </TableRow>
+
+        <TableRow
+            android:id="@+id/tableRow2"
+             android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+              android:layout_gravity="center_horizontal"
+          
+            android:paddingBottom="10dp"
+            android:paddingLeft="15dp"
+            android:paddingTop="20dp" >
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" >
+
+                <TextView
+                    android:id="@+id/txtUse"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBottom="@+id/totalamountofsugar"
+                         android:layout_alignParentBottom="@+id/tableRow1"
+                    android:gravity="left"
+                    android:text="Use" />
+
+                <EditText
+                    android:id="@+id/totalamountofsugar"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="bottom"
+                    android:layout_toRightOf="@+id/txtUse"
+                    android:ems="10"
+                    android:inputType="numberDecimal"
+                    android:width="150dp" />
+
+                <TextView
+                    android:id="@+id/textView5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBottom="@+id/totalamountofsugar"
+                    android:layout_toRightOf="@+id/totalamountofsugar"
+                    android:text="kg of Sugar" />
+
+            </RelativeLayout>
+
+        </TableRow>
+
+        <TableRow
+            android:id="@+id/tableRow3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" >
+        </TableRow>
+
+        <TableRow
+            android:id="@+id/tableRow4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" >
+
+            <Button
+                android:id="@+id/button1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right"
+                android:text="Calculate" />
+
+        </TableRow>
+    </TableLayout>
+
+</RelativeLayout>
+                
+            </FrameLayout>
+
+        </LinearLayout>
+
+    </TabHost>
+</RelativeLayout>

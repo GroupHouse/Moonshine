@@ -22,6 +22,8 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.view.View.OnClickListener;
 import android.view.WindowManager;
+import android.widget.AdapterView;
+import android.widget.AdapterView.OnItemSelectedListener;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
@@ -32,7 +34,7 @@ import android.widget.TableRow;
 import android.widget.TextView;
 import android.widget.Toast;
 
-public class EditRecipe extends SherlockActivity {
+public class EditRecipe extends SherlockActivity implements OnItemSelectedListener {
 
 	public int CountIng = 300;
 	public int z = 0;
@@ -71,6 +73,8 @@ public class EditRecipe extends SherlockActivity {
                  case DisplayMetrics.DENSITY_HIGH:
                 	 alt = "large";
                              break;
+                 default:
+                	 alt = "large";
             }
             
             DecimalFormat decimalFormat=new DecimalFormat();
@@ -168,9 +172,17 @@ public class EditRecipe extends SherlockActivity {
        			
             this.getWindow().setSoftInputMode(
             	    WindowManager.LayoutParams.SOFT_INPUT_STATE_ALWAYS_HIDDEN);	
+            
+      
+            
         }
-    
-
+	  public void onItemSelected(AdapterView<?> parent, View view,
+                                                    int position,long arg3) 
+      {
+      String type = parent.getTag().toString();
+      
+     
+      }
 public long LoadFirstIngredient(String type, ArrayList<String> SetIngs)
 {
 
@@ -236,9 +248,12 @@ public long LoadFirstIngredient(String type, ArrayList<String> SetIngs)
 			IngredientListContent.add(c.getString(c.getColumnIndex("name")));
 			c.moveToNext();
 		}
+	//IngredientListContent.add("Add New"); someday this will allow you to add things on the fly
     c.close();
 	db.close();
 	Spinner Ingredient = new Spinner(this);
+	Ingredient.setOnItemSelectedListener(this);
+	Ingredient.setTag(type);
     Ingredient.setAdapter(arrayAdapter); 
     mArraySpinner.add(Ingredient);
     CountIng = CountIng + 1;
@@ -328,7 +343,7 @@ public long LoadFirstIngredient(String type, ArrayList<String> SetIngs)
 
 		//add the row to the table
 		 t1.addView(Tr, new TableLayout.LayoutParams(LayoutParams.WRAP_CONTENT, LayoutParams.WRAP_CONTENT,Gravity.BOTTOM));
-			if (alt.equals("medium"))
+			if (alt.equals("small"))
 			{
 				Tr1.setId(CountIng+101);
 				TBR.add(Tr1);
@@ -338,7 +353,7 @@ public long LoadFirstIngredient(String type, ArrayList<String> SetIngs)
 		 Tr.addView(Ingredient);
 		 Tr.addView(IngredientAmount);
 		 Tr.addView(IngredientMeasure);
-			if (alt.equals("medium"))
+			if (alt.equals("small"))
 			{
 				Tr1.addView(Btn);
 			}
@@ -364,13 +379,19 @@ public boolean DisplayRecipe(Shine WhichRecipe)
 	Name.setText(Recipe.getName());
 	
 	EditText sg = (EditText) findViewById(R.id.spSG);
+	if (Recipe.getSG() > 0)
+	{
 	sg.setText(Double.toString(Recipe.getSG()));
-	
+	}
+	else
+	{
+		sg.setText("0");	
+	}
 	TextView id = (TextView) findViewById(R.id.txtRecID);
 	id.setText(Integer.toString(Recipe.getId()));
 
 	TextView MashSize = (TextView) findViewById(R.id.spMash);
-	MashSize.setText(Integer.toString(Recipe.getMashSize()));
+	MashSize.setText(Double.toString(Recipe.getMashSize()));
 
 	Spinner Type = (Spinner) findViewById(R.id.spType);
 	ArrayAdapter myAdapType = (ArrayAdapter) Type.getAdapter(); 
@@ -391,8 +412,10 @@ public boolean DisplayRecipe(Shine WhichRecipe)
 	ArrayList<String> IngredientListType = new ArrayList<String>();
 	IngredientListType.addAll(Recipe.getIngredientType());
 	ArrayList<Integer> RowID = new ArrayList<Integer>();
+	if (Recipe.getingRowID().size() > 0)
+	{
 	RowID.addAll(Recipe.getingRowID());
-	
+	}
 	for(int i=0;i<Recipe.getIngredients().size();i++)
 		{
 		String content = IngredientListContent.get(i);
@@ -409,6 +432,16 @@ public boolean DisplayRecipe(Shine WhichRecipe)
 		LoadFirstIngredient(type, SetIngredients);
 		SetIngredients.clear();
 		}
+	if(Recipe.getIngredients().size()==0)
+	{
+		SetIngredients.add("Water");
+		SetIngredients.add("0");
+		SetIngredients.add("L");
+		SetIngredients.add("0");
+
+		LoadFirstIngredient("Other", SetIngredients);
+		SetIngredients.clear();
+	}
 	
 	EditText instruct = (EditText) findViewById(R.id.edInstruct);
 	instruct.setText(Recipe.getInstructions());
@@ -480,13 +513,20 @@ public boolean DisplayRecipe(Shine WhichRecipe)
 
  	@Override
     public boolean onOptionsItemSelected(MenuItem menu) {
- 		
+     	EditText Name = (EditText) findViewById(R.id.edName);
+
  	     switch (menu.getItemId()) {
          case R.id.save_button:
+        	 if (Name.getText().toString().equals("temp"))
+        	 {
+      			Toast.makeText(getBaseContext(), "You must change the recipe name", Toast.LENGTH_LONG).show();
+        	 }
+        	 else
+        	 {
         	 SaveEverything();
+        	 }
         	 return false;
          default: //Error checking to make sure name is not temp
-         	EditText Name = (EditText) findViewById(R.id.edName);
 
         	 if (Name.getText().toString().equals("temp"))
         	 {
@@ -494,6 +534,7 @@ public boolean DisplayRecipe(Shine WhichRecipe)
         	 }
         	 else
         	 {
+        		 SaveEverything();
         	    Intent i = new Intent(getBaseContext(), ShowRecipe.class);
                 i.putExtra("newornot", "not");
                 i.putExtra("RecipeName", Name.getText().toString());
@@ -560,7 +601,12 @@ public boolean DisplayRecipe(Shine WhichRecipe)
  	    super.onDestroy();
  	    Apptentive.onDestroy(this);
  	    db.close();
- 	  }	
+ 	  }
+	@Override
+	public void onNothingSelected(AdapterView<?> arg0) {
+		// TODO Auto-generated method stub
+		
+	}	
  	  
 
 }

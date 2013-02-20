@@ -50,27 +50,21 @@ public class EditIngredients extends SherlockActivity {
 		tabHost.setup();
 
 		TabSpec spec1=tabHost.newTabSpec("Tab 1");
-	    //Intent intent = new Intent(this, EditSugar.class); //or go to calculator list
-	    //spec1.setContent(intent);
+	    
 		spec1.setContent(R.id.tab1);
 		spec1.setIndicator("Sugar");
-	//	spec1.setIndicator("Sugar",getResources().getDrawable(R.drawable.onscreensugar));
 		
 		TabSpec spec2=tabHost.newTabSpec("Tab 2");
 		spec2.setIndicator("Grain");
 		spec2.setContent(R.id.tab2);
-		//spec2.setIndicator("Grain",getResources().getDrawable(R.drawable.onscreensugar));
-
+	
 		TabSpec spec3=tabHost.newTabSpec("Tab 3");
 		spec3.setIndicator("Vitamin");
 		spec3.setContent(R.id.tab3);
-	//	spec3.setIndicator("Vitamin",getResources().getDrawable(R.drawable.onscreensugar));
-
+	
 		TabSpec spec4=tabHost.newTabSpec("Tab 4");
 		spec4.setIndicator("Other");
 		spec4.setContent(R.id.tab4);
-	//	spec4.setIndicator("Other",getResources().getDrawable(R.drawable.onscreensugar));
-
 		
 		tabHost.addTab(spec1);
 		tabHost.addTab(spec2);
@@ -97,7 +91,6 @@ public class EditIngredients extends SherlockActivity {
 	   
 		arrayAdapter =  new ArrayAdapter<String>(this, android.R.layout.simple_spinner_item,Sugars);
     	ListView list1 = (ListView) findViewById(R.id.Sugars);
-    	   //ArrayAdapter<String> arrayAdapter =  new ArrayAdapter<String>(this,android.R.layout.simple_list_item_1, Name);
     	list1.setAdapter(arrayAdapter); 
         registerForContextMenu(list1);
 	
@@ -113,7 +106,6 @@ public class EditIngredients extends SherlockActivity {
 
 		grainAdapter =  new ArrayAdapter<String>(this, android.R.layout.simple_spinner_item,Grains);
     	ListView grain = (ListView) findViewById(R.id.Grains);
-    	   //ArrayAdapter<String> arrayAdapter =  new ArrayAdapter<String>(this,android.R.layout.simple_list_item_1, Name);
     	grain.setAdapter(grainAdapter); 
         registerForContextMenu(grain);
     	
@@ -129,7 +121,6 @@ public class EditIngredients extends SherlockActivity {
 
 		VitAdapter =  new ArrayAdapter<String>(this, android.R.layout.simple_spinner_item,Vitamins);
     	ListView Vitamin = (ListView) findViewById(R.id.Vitamins1);
-    	   //ArrayAdapter<String> arrayAdapter =  new ArrayAdapter<String>(this,android.R.layout.simple_list_item_1, Name);
     	Vitamin.setAdapter(VitAdapter); 
         registerForContextMenu(Vitamin);
     	
@@ -146,11 +137,8 @@ public class EditIngredients extends SherlockActivity {
 
 		OtherAdapter =  new ArrayAdapter<String>(this, android.R.layout.simple_spinner_item,Other);
     	ListView ot = (ListView) findViewById(R.id.Others);
-    	   //ArrayAdapter<String> arrayAdapter =  new ArrayAdapter<String>(this,android.R.layout.simple_list_item_1, Name);
     	ot.setAdapter(OtherAdapter); 
         registerForContextMenu(ot);    	
-    	
-    	
     	
     	Button GrainButton = (Button)findViewById(R.id.GrainButton);
     	GrainButton.setOnClickListener(new View.OnClickListener() 
@@ -158,8 +146,8 @@ public class EditIngredients extends SherlockActivity {
    			public void onClick(View v) 
    			{
    			  InputMethodManager inputManager = (InputMethodManager)
-                      getSystemService(Context.INPUT_METHOD_SERVICE); 
- inputManager.hideSoftInputFromWindow(getCurrentFocus().getWindowToken(),
+   		      getSystemService(Context.INPUT_METHOD_SERVICE); 
+   			  inputManager.hideSoftInputFromWindow(getCurrentFocus().getWindowToken(),
                          InputMethodManager.HIDE_NOT_ALWAYS);
    				addItem(1);
    		   
@@ -240,6 +228,7 @@ public class EditIngredients extends SherlockActivity {
 							arrayAdapter.notifyDataSetChanged();
 						}
 					}
+				
 		}
 		if (type == 1)
 		{
@@ -298,7 +287,14 @@ public class EditIngredients extends SherlockActivity {
 				}
 			}
 		}
+		if (name.length() > 0)
+		{
 		Toast.makeText(getBaseContext(), tag + ": " + name , Toast.LENGTH_LONG).show();
+		}
+		else
+		{
+			Toast.makeText(getBaseContext(), "Add some letters please" , Toast.LENGTH_LONG).show();	
+		}
 	}
 	
 

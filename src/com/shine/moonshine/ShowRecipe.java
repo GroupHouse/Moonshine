@@ -31,7 +31,8 @@ public class ShowRecipe extends SherlockActivity {
 		// Show the Up button in the action bar.
 		getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 	    Apptentive.onCreate(this, savedInstanceState);
-
+	    DilutionActivity a = new DilutionActivity();
+	    
 	    Intent intent = getIntent();
 	    WhichRecipe = intent.getStringExtra("RecipeName");
 	    DisplayRecipe(WhichRecipe);
